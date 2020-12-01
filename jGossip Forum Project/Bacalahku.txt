@@ -1,0 +1,28 @@
+Projek JSPForum v0.1 (Malay)
+-----------------------------
+
+Pengenalan
+-----------
+Pakej keluaran pertama projek ini mengandungi dua 'folder' utama iaitu 'folder' forum dan juga folder 'WEB-INF'. 'Folder' forum mengandungi kesemua fail JSP yang merupakan antaramuka akhir kepada pangguna manakala 'Folder' WEB-INF pula mengandungi fail Servlet dan juga JavaBean yang bertindak sebagai komponen pemproses maklumat dan juga respon.
+
+Projek ini mengimplimentasikan senibina JSP-Servlet-JSP bertujuan untuk mempertingkatkan keselamatan pemprosesan maklumat di mana kesemua pemprosessan maklumat dan penyimpanan maklumat dilakukan di dalam Servlet. Penggunaan Session juga digunakan sepenuhnya bagi meningkatkan ciri-ciri keselamatan. Penggunaan URL Rewriting telah dikurangkan bagi mengelakkan pengguna akhir menggodam sistem maklumat yang sedia ada.
+
+Di dalam 'folder' forum, terdapat beberapa 'folder' utama iaitu:
+
+1. templates - terkandungnya fail-fail jsp dan CSS yang boleh diubah mengikut kesesuaian pengguna akhir.
+
+2. jsps - terkandungnya fail-fail jsp yang "mendengar" 'request' daripada pengguna dan di 'invoke' kepada Servlet.
+
+3. engines - terkandungnya fail-fail jsp yang menjadi enjin bagi penjanaan paparan forum.
+
+Cara memasang
+--------------
+Projek ini telah dibangunkan dan diuji sepenuhnya menggunakan aplikasi web OrionServer (http://www.orionserver.com). Untuk memasangnya, terlebih dahulu perlulah memasang OrionServer itu sendiri. Untuk prestasi yang memberangsangkan, pasangkan Orion beserta dengan Jikes. Kemudian, salin kedua-dua 'folder' forum dan juga WEB-INF ke dalam 'folder' default-web-app. Maka siaplah pemasangan aplikasi.
+
+Untuk pemasangan pangkalan data, ikutlah apa-apa jenis pangkalan data yang ingin digunakan. Kemudian, bangunkan pangkalan data tersebut mengikut rekabentu yang sedia ada seperti yang telah disertakan sekali fail pangkalan data access yang bernama forum.mdb. Setelah itu, ubah fail WEB-INF/classes/forum/bean/DBConnection.java untuk menyesuaikan sistem dengan pangkalan data. Kemudian, siaplah pemasangan aplikasi pangkalan data.
+
+Setelah pemasangan tersebut, kompilkan kesemua fail *.java dengan melarikan javac *.java di dalam 'folder' WEB-INF/classes/forum dan WEB-INF/classes/forum/bean. (Peringatan: sebelum itu pastikan CLASSPATH telah diaturkan seperti berikut: SET CLASSPATH=C:\JDK13~1.1\SRC.JAR;C:\ORION\ORION.JAR;C:\orion\defaul~1\WEB-INF\classes).
+
+Kemudian, larikan Orion dan sedia untuk beroperasi.
+
+Selamat Berjaya.
